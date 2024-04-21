@@ -1,0 +1,11 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  version: 1.0.0
+paths:
+  /client-ip:
+    get:
+      summary: Get client IP
+      responses:
+        '200':
+          description: A successful response
