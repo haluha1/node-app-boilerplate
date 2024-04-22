@@ -65,6 +65,13 @@ const options = {
   explorer: true
 };
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
+// If you set app.set('trust proxy', true), 
+// req.ip will return the real IP address even if behind proxy. 
+// Check the documentation for further information
+// https://expressjs.com/en/4x/api.html#req.ip
+// ip => X-Real-IP
+// ips => X-Forwarded-For
+app.set('trust proxy', true);
 
 app.get('/client-ip', (req, res) => {
   res.send(`Client IP: ${req.ip}`);
@@ -77,6 +84,7 @@ app.get('/ip', async (req, res, next) => {
     url.searchParams.set('api_key', process.env?.API_KEY);
     url.searchParams.set('ip_address', ip);
     const result = await callAPI(url);
+    result['x-forwarded-for'] = req.ips;
     res.status(200).json(result);
   } catch (error) {
     next(new ApiError(httpStatus.BAD_GATEWAY, error?.message || 'Internal server error'));
