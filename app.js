@@ -73,11 +73,20 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
 // ips => X-Forwarded-For
 app.set('trust proxy', true);
 
-app.get('/client-ip', (req, res) => {
-  res.send(`Client IP: ${req.ip}`);
+app.get('/ip', (req, res) => {
+  let result = {};
+  try {
+    result = {
+      ip: req?.ip,
+      "x-forwarded-for": req?.ips
+    }
+    res.json(result);
+  } catch (error) {
+    next(new ApiError(httpStatus.BAD_GATEWAY, error?.message || 'Internal server error'));
+  }
 });
 
-app.get('/ip', async (req, res, next) => {
+app.get('/ip/info', async (req, res, next) => {
   try {
     let ip = req.ip;
     const url = new URL("https://ipgeolocation.abstractapi.com/v1/");
