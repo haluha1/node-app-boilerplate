@@ -77,7 +77,7 @@ app.get('/ip', (req, res) => {
   let result = {};
   try {
     result = {
-      ip: req?.ip,
+      "ip_address": req?.ip,
       "x-forwarded-for": req?.ips
     }
     res.json(result);
