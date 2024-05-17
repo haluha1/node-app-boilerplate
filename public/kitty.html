@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>haluha1</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="battery.css">
+    <link rel="stylesheet" href="bundle.css">
+    <style>
+        body {
+            color: #eee;
+            background: #121212;
+        }
+
+        .message-container {
+            transition: opacity 1s;
+        }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            opacity: 1;
+            transition: opacity 0.6s;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .alert.success {
+            background-color: #04AA6D;
+        }
+
+        .alert.info {
+            background-color: #2196F3;
+        }
+
+        .alert.warning {
+            background-color: #ff9800;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
+        .battery-container {
+            position: absolute;
+            top: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        .title {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: .2em;
+            font-size: 16px;
+            text-shadow: 0 1px 0 rgba(#000, .1);
+            text-indent: .3em;
+        }
+
+        .notebook-vertical {
+            /* height: 100%; */
+            height: 100px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-flow: column;
+            flex-flow: column;
+        }
+
+        .top-floater {
+            background: var(--colab-primary-surface-color);
+        }
+
+        #header-background,
+        #header-content {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .fade {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message-container fade">
+        <div class="alert info">
+            <span class="closebtn">&times;</span>
+            Halo Queen 
+        </div>
+        <div class="alert info">
+            <span class="closebtn">&times;</span>
+            Cảm giác như Q đang buồn chuyện ji đó
+            <br/>
+            Cơ mà T hong giỏi chuyện ăn nói cho lắm
+            <br/>
+            Nên là mày mò làm cái web này cho Q thư giãn nè
+            <br/>
+            Mà T làm chuyên về mảng back-end (Kiểu màn hình như mấy hacker trong phim ấy :v)
+            <br/>
+            Q thấy UI lỏ quá đừng chê nha :v
+            <br/>
+            Thật ra là ban đầu T định kể truyện cười cơ
+            <br/>
+            Nhưng mà search gg cả buổi tối hong có cái ra :v
+            <br/>
+        </div>
+        <div class="alert info">
+            <span class="closebtn">&times;</span>
+            Nói chung là...
+            <br/>
+            Ngắm mèo sạc năng lượng nha Queen ❤️
+        </div>
+    </div>
+
+    <div class="battery-container">
+        <div id="battery" class="battery-init"></div>
+        <div class="title">Click to recharge your energy!</div>
+    </div>
+    <!-- <div class="kitty"></div> -->
+    <div id="footer" class="kitty-container">
+        <div class="notebook-vertical" style="position: relative;">
+            <div class="top-floater">
+                <div role="banner">
+                    <div id="header-background">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascripts/kitty.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+
+@-webkit-keyframes kitty-mode-left-animation {
+    0% {
+        background-position: 110%,110%
+    }
+
+    15% {
+        background-position: 110%,110%
+    }
+
+    35% {
+        background-position: -10%,110%
+    }
+
+    50% {
+        background-position: -10%,110%
+    }
+
+    65% {
+        background-position: -10%,110%
+    }
+
+    85% {
+        background-position: -10%,110%
+    }
+
+    100% {
+        background-position: -10%,-10%
+    }
+}
+
+@keyframes kitty-mode-left-animation {
+    0% {
+        background-position: 110%,110%
+    }
+
+    15% {
+        background-position: 110%,110%
+    }
+
+    35% {
+        background-position: -10%,110%
+    }
+
+    50% {
+        background-position: -10%,110%
+    }
+
+    65% {
+        background-position: -10%,110%
+    }
+
+    85% {
+        background-position: -10%,110%
+    }
+
+    100% {
+        background-position: -10%,-10%
+    }
+}
+
+@-webkit-keyframes kitty-mode-right-animation {
+    0% {
+        background-position: 110%,110%
+    }
+
+    15% {
+        background-position: 110%,110%
+    }
+
+    35% {
+        background-position: 110%,110%
+    }
+
+    50% {
+        background-position: 110%,110%
+    }
+
+    65% {
+        background-position: -10%,110%
+    }
+
+    85% {
+        background-position: -10%,110%
+    }
+
+    100% {
+        background-position: -10%,-10%
+    }
+}
+
+@keyframes kitty-mode-right-animation {
+    0% {
+        background-position: 110%,110%
+    }
+
+    15% {
+        background-position: 110%,110%
+    }
+
+    35% {
+        background-position: 110%,110%
+    }
+
+    50% {
+        background-position: 110%,110%
+    }
+
+    65% {
+        background-position: -10%,110%
+    }
+
+    85% {
+        background-position: -10%,110%
+    }
+
+    100% {
+        background-position: -10%,-10%
+    }
+}
+
+@-webkit-keyframes kitty-mode-animation-slow {
+    0% {
+        background-position: 110%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@keyframes kitty-mode-animation-slow {
+    0% {
+        background-position: 110%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@-webkit-keyframes kitty-mode-animation-medium {
+    0% {
+        background-position: 110%
+    }
+
+    5% {
+        background-position: 110%
+    }
+
+    95% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@keyframes kitty-mode-animation-medium {
+    0% {
+        background-position: 110%
+    }
+
+    5% {
+        background-position: 110%
+    }
+
+    95% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@-webkit-keyframes kitty-mode-animation-fast {
+    0% {
+        background-position: 110%
+    }
+
+    10% {
+        background-position: 110%
+    }
+
+    90% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@keyframes kitty-mode-animation-fast {
+    0% {
+        background-position: 110%
+    }
+
+    10% {
+        background-position: 110%
+    }
+
+    90% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+.stripes-kitty {
+    background-image: url(./img/STRIPES.gif)
+}
+
+.kinako-kitty {
+    background-image: url(./img/KINAKO.gif)
+}
+
+.midnight-kitty {
+    background-image: url(./img/MIDNIGHT.gif)
+}
+
+.firefox-kitty {
+    background-image: url(./img/FIREFOX.gif)
+}
+
+.maneki-kitty {
+    background-image: url(./img/MANEKI.gif)
+}
+
+.valentin-kitty {
+    background-image: url(./img/VALENTIN.gif)
+}
+
+.ghostpuffs-kitty {
+    background-image: url(./img/GHOSTPUFFS.gif)
+}
+
+.psl-kitty {
+    background-image: url(./img/PUMPKINSPICELATTE.gif)
+}
+
+.vampiregoth-kitty {
+    background-image: url(./img/xX_vampiregoth91_Xx.gif)
+}
+
+.kace-kitty {
+    background-image: url(./img/KACE.gif)
+}
+
+.ferris-kitty {
+    background-image: url(./img/FERRIS.gif)
+}
+
+.sprinkles-kitty {
+    background-image: url(./img/SPRINKLES.gif)
+}
+
+.kitty-mode-fast {
+    -webkit-animation: kitty-mode-animation-fast 40s linear;
+    animation: kitty-mode-animation-fast 40s linear;
+}
+
+.kitty-mode-medium {
+    -webkit-animation: kitty-mode-animation-medium 40s linear;
+    animation: kitty-mode-animation-medium 40s linear
+}
+
+.kitty-mode-slow {
+    -webkit-animation: kitty-mode-animation-slow 40s linear;
+    animation: kitty-mode-animation-slow 40s linear
+}
+
+.kitty-left {
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.kitty-canvas {
+    background-repeat: no-repeat;
+    -webkit-background-size: 73px 60px;
+    background-size: 73px 60px;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.notebook-vertical {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+    flex-flow: column
+}
+
+.notebook-horizontal {
+    background: var(--colab-primary-surface-color);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative
+}
+
+
+
+@-webkit-keyframes corgis {
+    0% {
+        background-position: 120%,-20%,-20%,120%
+    }
+
+    25% {
+        background-position: -20%,-20%,-20%,120%
+    }
+
+    30% {
+        background-position: -20%,-20%,-20%,120%
+    }
+
+    55% {
+        background-position: -20%,120%,-20%,120%
+    }
+
+    65% {
+        background-position: -20%,120%,-20%,120%
+    }
+
+    95% {
+        background-position: -20%,120%,120%,-20%
+    }
+
+    100% {
+        background-position: -20%,120%,120%,-20%
+    }
+}
+
+@keyframes corgis {
+    0% {
+        background-position: 120%,-20%,-20%,120%
+    }
+
+    25% {
+        background-position: -20%,-20%,-20%,120%
+    }
+
+    30% {
+        background-position: -20%,-20%,-20%,120%
+    }
+
+    55% {
+        background-position: -20%,120%,-20%,120%
+    }
+
+    65% {
+        background-position: -20%,120%,-20%,120%
+    }
+
+    95% {
+        background-position: -20%,120%,120%,-20%
+    }
+
+    100% {
+        background-position: -20%,120%,120%,-20%
+    }
+}
+
+.basic-corgi-mode,.halloween-corgi-mode,.pride-corgi-mode,.december-holiday-corgi-mode {
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -webkit-animation: corgis 95s linear infinite;
+    animation: corgis 95s linear infinite
+}
+
+.basic-corgi-mode {
+    background-image: url(./img/chocolatechip.gif),url(./img/oreo.gif),url(./img/oreo.gif),url(./img/redvelvet.gif)
+}
+
+.halloween-corgi-mode {
+    background-image: url(./img/halloween_chocolatechip.gif),url(./img/halloween_oreo.gif),url(./img/halloween_oreo.gif),url(./img/halloween_redvelvet.gif)
+}
+
+.december-holiday-corgi-mode {
+    background-image: url(./img/holiday_chocolatechip.gif),url(./img/holiday_oreo.gif),url(./img/holiday_oreo.gif),url(./img/holiday_redvelvet.gif)
+}
+
+.pride-corgi-mode {
+    background-image: url(./img/pride_chocolatechip.gif),url(./img/oreo.gif),url(./img/oreo.gif),url(./img/redvelvet.gif)
+}
+
+@-webkit-keyframes crabs {
+    0% {
+        background-position: -10%
+    }
+
+    5% {
+        background-position: -10%
+    }
+
+    45% {
+        background-position: 110%
+    }
+
+    50% {
+        background-position: 110%
+    }
+
+    95% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+@keyframes crabs {
+    0% {
+        background-position: -10%
+    }
+
+    5% {
+        background-position: -10%
+    }
+
+    45% {
+        background-position: 110%
+    }
+
+    50% {
+        background-position: 110%
+    }
+
+    95% {
+        background-position: -10%
+    }
+
+    100% {
+        background-position: -10%
+    }
+}
+
+.crab-mode {
+    -webkit-animation: crabs 60s linear infinite;
+    animation: crabs 60s linear infinite;
+    background-image: url(./img/crab.gif);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 100%;
+    position: relative;
+    width: 100%
+}

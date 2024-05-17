@@ -9,6 +9,7 @@ const httpStatus = require('http-status');
 const OpenApiValidator = require('express-openapi-validator');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
+const path = require('path');;
 
 const config = require('./config/config');
 const morgan = require('./config/morgan');
@@ -72,6 +73,11 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options))
 // ip => X-Real-IP
 // ips => X-Forwarded-For
 app.set('trust proxy', true);
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function(req, res) {
+  res.sendFile('kitty.html', { root: path.resolve(__dirname,"public") });
+});
 
 app.get('/client-ip', (req, res) => {
   res.send(`Client IP: ${req.ip}`);
